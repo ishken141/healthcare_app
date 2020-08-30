@@ -9,7 +9,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body> 
+  <% if user_signed_in?%> 
+  <%= link_to "ログアウト", destroy_user_session_path, class: "devise_destroy"%>
+  <% else %> 
+  <%= link_to "ログイン", new_user_session_path, class: "devise_login" %> 
+  <%= link_to "サインイン", new_user_registration_path, class: "devise_signin" %> 
+  <% end %>
+  <%= yield %>
   </body>
 </html>
