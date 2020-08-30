@@ -11,7 +11,8 @@
 
   <body> 
   <% if user_signed_in?%> 
-  <%= link_to "ログアウト", destroy_user_session_path, class: "devise_destroy"%>
+  <%= link_to "ログアウト", destroy_user_session_path, class: "devise_destroy"%> 
+  <%= link_to "マイページ", user_path(current_user), class: "mypage.lead" %>
   <% else %> 
   <%= link_to "ログイン", new_user_session_path, class: "devise_login" %> 
   <%= link_to "サインイン", new_user_registration_path, class: "devise_signin" %> 
