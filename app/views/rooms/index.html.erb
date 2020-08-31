@@ -1,5 +1,6 @@
+<h1>ホーム</h1>
 <div class="test">
 <% @users.each do |user| %> 
-<%= user.name %>  
+<%= link_to user.name, room_path(user) %>  
 <% end %> 
 </div>
