@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "rooms#index" 
   resources :rooms, only: [:index, :show]  
   resources :users, only: :show do 
-    resources :profiles, only: :edit  
+    resources :profiles, only: [:edit, :update]  
   end 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

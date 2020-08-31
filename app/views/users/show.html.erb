@@ -1,4 +1,6 @@
 <%= "#{@name}さん" %> 
 <%= link_to "自己紹介編集", edit_user_profile_path(@user.id, @profile.id) %>
-<h1>マイページ</h1>
+<h1>マイページ</h1> 
+<%= @user.profile.image %> 
+<%= @user.profile.age %>
 <%= link_to "ホーム", root_path %> 
