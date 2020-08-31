@@ -2,5 +2,9 @@
 <%= link_to "自己紹介編集", edit_user_profile_path(@user.id, @profile.id) %>
 <h1>マイページ</h1> 
 <%= @user.profile.image %> 
-<%= @user.profile.age %>
+<%= @user.profile.age %> 
+<%= @user.profile.certificaton %>
+<%= @user.profile.strong %> 
+<%= @user.profile.birthplace %> 
+<%= @user.profile.text %>
 <%= link_to "ホーム", root_path %> 
