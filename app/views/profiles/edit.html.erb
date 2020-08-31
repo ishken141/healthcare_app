@@ -1,4 +1,18 @@
-<%= @user.profile.age%> 
-<%= @user.profile.certificaton%> 
-<%= @user.profile.gender %> 
-<%= @user.profile.strong %>
+<%= form_with model: [@user, @profile], local: true do |f| %> 
+<%= f.text_field :image %>
+<%= f.text_field :age %>
+<%= f.text_field :certificaton %> 
+<%= f.text_field :gender %>
+<%= f.text_field :strong %> 
+<%= f.text_field :birthplace %> 
+<%= f.text_field :text %> 
+<%= f.submit "更新"%>
+<% end %>
+
+
+
+
+<%# <%= @user.profile.age %> 
+<%# <%= @user.profile.certificaton %> 
+<%# <%= @user.profile.gender %> 
+<%# <%= @user.profile.strong %> 
