@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  get 'messages/create'
-  get 'messages/destroy'
-  devise_for :users
+  devise_for :users, :controllers => {
+    :registrations => 'users/registrations',
+    :sessions => 'users/sessions'   
+  } 
+
+  devise_scope :user do
+    get "sign_in", :to => "users/sessions#new"
+    get "sign_out", :to => "users/sessions#destroy" 
+  end
   root "rooms#index" 
   resources :rooms, only: [:index, :show]  
   resources :users, only: :show do 
