@@ -1,7 +1,7 @@
 <%= "#{@name}さん" %> 
 <%= link_to "自己紹介編集", edit_user_profile_path(@user.id, @profile.id) %>
 <h1>マイページ</h1> 
-<%= @user.profile.image %> 
+<%= image_tag @user.profile.image.url %> 
 <%= @user.profile.age %> 
 <%= @user.profile.certificaton %>
 <%= @user.profile.strong %> 
