@@ -1,11 +1,32 @@
 <%= form_with model: [@user, @profile], local: true do |f| %> 
-<%= f.file_field :image %>
-<%= f.text_field :age %>
+<div class="form-group">
+<label>プロフィール写真</label>
+<%= f.file_field :image %> 
+</div>
+<div class="form-group">
+<label>年齢</label>
+<%= f.text_field :age %>　
+</div>　
+<div class="form-group">
+<label>資格</label>
 <%= f.text_field :certificaton %> 
+</div>
+<div class="form-group">
+<label>性別</label>
 <%= f.text_field :gender %>
+</div>　
+<div class="form-group">
+<label>得意分野</label>
 <%= f.text_field :strong %> 
+</div>　
+<div class="form-group">
+<label>出身</label>
 <%= f.text_field :birthplace %> 
+</div> 
+<div class="form-group">
+<label>コメント</label>
 <%= f.text_field :text %> 
+</div>
 <%= f.submit "更新"%>
 <% end %>
 
