@@ -1,0 +1,103 @@
+.message_title { 
+    text-align: center;
+    font-weight: bold;
+}
+.Chat {
+    width: 90%;
+    // height: 300px;
+    // display: inline-block;
+    margin-top: 60px;
+    margin-left: 50px;
+}
+
+.self_image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    img {
+    object-fit: cover;
+    }
+}
+
+.MessageField {
+    width: 100%;
+    padding: 10px;
+}
+
+.MessageBox {
+    background-color: #bce2e8;
+    margin-bottom: 30px;
+    padding: 10px;
+    color: #2f2725;
+    border-radius: 3px;
+    width: 100%;
+    position: relative;
+    margin-top: 15px;
+}
+
+.MessageBox::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 0px;
+    top: -15px;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid   #bce2e8;
+    border-left: 15px solid transparent;
+}
+.MessageBox::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 0px;
+    top: -12px;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid   #bce2e8;
+    border-left: 15px solid transparent;
+}
+
+.Message{
+    font-size: 15px;
+    width: 100%;
+}
+
+.MessageInfo{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    &__userName {
+    font-size: 15px; 
+    }
+    &__userEdit {
+    display: inline;
+    margin-left: 5px;
+    }
+}
+.form { 
+    display: flex;
+    justify-content: center;
+    // margin-right: 200px;
+    // margin-left: 200px; 
+    // margin-top: 50px;
+    .form-area {
+      height: 57px;
+      font-size: 15px;
+      padding: 5px;
+      width: 600px;
+      border: 4px solid #000;
+    }
+    .submit {
+      height: 57px;
+      font-size: 13px;
+      font-weight: bold;
+      color: #000; 
+      float: right;
+      background-color: #bce2e8;
+      border: 4px solid #000;
+    }
+}

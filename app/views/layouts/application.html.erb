@@ -3,10 +3,9 @@
   <head>
     <title>MathingApp</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
+    <%= csp_meta_tag %> 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "application" %>
   </head>
 
   <body> 
@@ -18,6 +17,6 @@
   <%= link_to "ログイン", new_user_session_path, class: "devise_login" %> 
   <%= link_to "サインイン", new_user_registration_path, class: "devise_signin" %> 
   <% end %>
-  <%= yield %>
+  <%= yield %> 
   </body>
 </html>
