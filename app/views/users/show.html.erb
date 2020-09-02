@@ -1,26 +1,25 @@
-<%= "#{@name}さん" %> 
 <%= link_to "自己紹介編集", edit_user_profile_path(@user.id, @profile.id) %>
-<h1 class="mypage">マイページ</h1> 
+<h1 class="mypage"><%= "#{@name}さん" %></h1> 
 <%= image_tag @user.profile.image.url, class: "mypage_image" %> 
 <div class="mypage_info">
-<div class="age">　
+<div class="age">
 <label>年齢</label>
 <%= "#{@user.profile.age}歳" %> 
 </div>
-<div class="certificaton">　
+<div class="certificaton">
 <label>資格</label>
 <%= "#{@user.profile.certificaton}" %>
 </div> 
-<div class="strong">　
+<div class="strong">
 <label>得意分野</label>
 <%= "#{@user.profile.strong}" %> 
 </div> 
-<div class="birthplace">　
+<div class="birthplace">
 <label>出身</label>
 <%= "#{@user.profile.birthplace}"%> 
 </div> 
-<div class="text">　
+<div class="text">
 <label>コメント</label>
 <%= "#{@user.profile.text}"%> 
+</div> 
 </div>
-<%= link_to "ホーム", root_path, class: "home"%> 
