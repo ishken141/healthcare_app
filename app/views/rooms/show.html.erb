@@ -1,11 +1,34 @@
-
-<% @user.messages.each do |message| %> 
-<%= message.text %> 
-<%= message.user.name %>
-<%= link_to "削除", user_message_path(@user, message), method: :delete %>
-<% end %>
-<h1>会話する場所</h1>
-<%= form_with model: [@user, @message], local: true do |f| %>
-<%= f.text_field :text %> 
-<%= f.submit %>
-<% end %>
+<h3 class="message_title">相談室</h3>
+<div class="Chat">  
+  <div class="MessageField">      
+        <% @user.messages.each do |message| %> 
+        <div class="MessageInfo__userimage">
+        <% if message.user.profile.image.url.present? %> 
+        <%= image_tag message.user.profile.image.url, class: "self_image" %>
+        <% else %> 
+        <%= image_tag "default.png", class: "self_image" %>
+        <% end %>
+        </div>
+        <div class="MessageBox">
+        <div class="Message">
+        <%= message.text %>  
+        </div> 
+        <div class="MessageInfo">
+        <div class="MessageInfo__user_name">
+        <%= message.user.name %> 
+        </div>
+        <% if user_signed_in? && current_user.id == message.user_id %>
+        <%= link_to "削除", user_message_path(@user, message), method: :delete, class: "f000" %>
+        <% end %> 
+        </div>
+        </div>
+        <% end %>  
+        </div>
+  </div>
+<div class="form">
+    <%= form_with model: [@user, @message], local: true, id: "new_comment" do |f| %>
+    <%= f.text_field :text, class: "form-area" %> 
+    <%= f.submit "コメントする", class: "submit" %>
+    <% end %> 
+</div> 
+</div>
