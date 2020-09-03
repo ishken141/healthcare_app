@@ -3,9 +3,13 @@ class MessagesController < ApplicationController
     @user = User.find(params[:user_id]) 
     @message = @user.messages.new 
     if @message.update(message_params) 
-      redirect_to room_path(@user)
+    respond_to do |format| 
+        format.html { redirect_to room_path(@user)} 
+        format.json 
+      # redirect_to room_path(@user)
+    end  
   end  
-end  
+end 
   def destroy 
       @user = User.find(params[:user_id]) 
       @message = @user.messages.find(params[:id]) 
