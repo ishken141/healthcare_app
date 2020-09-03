@@ -1,4 +1,8 @@
+<div class="form-main">
 <%= form_with model: [@user, @profile], local: true do |f| %> 
+<div class="form-info">
+<div class="self-info">自己紹介編集
+</div>
 <div class="form-group">
 <label>プロフィール写真</label>
 <%= f.file_field :image %> 
@@ -27,8 +31,10 @@
 <label>コメント</label>
 <%= f.text_field :text %> 
 </div>
-<%= f.submit "更新"%>
-<% end %>
+<%= f.submit "更新", class: "btn btn-primary"%>
+<% end %> 
+</div> 
+</div>
 
 
 
