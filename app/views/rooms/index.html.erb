@@ -4,7 +4,7 @@
 <%= link_to "相談する", room_path(user), class: "lead_user"%></h5> 
 <div class="room_certificaton">
 <h5><%= user.profile.certificaton %>
-<%= "❤️３" %></h5> 
+<%= "高評価：３" %></h5> 
 </div>
 <% if user.profile.present? %> 
 <%= image_tag user.profile.image.url, class: "room_image"%>
