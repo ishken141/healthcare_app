@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Profile.create(id: 1, image: File.open("./public/images/default.png"), age: 21, certificaton: "test2", gender: "test3", strong: "test4", birthplace: "test5", text: "test6", user_id: "1")
+Room.create(id: 1, box: "test1")

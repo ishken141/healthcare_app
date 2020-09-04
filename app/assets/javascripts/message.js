@@ -13,7 +13,7 @@ $(function(){
             <div class="MessageInfo__userName">
               <p>${message.user_name}</p>
             </div>
-            <a class="f000" rel="nofollow" data-method="delete" href="/users/${message.user_id}/messages/${message.id}">削除
+            <a class="f000" rel="nofollow" data-method="delete" href="/rooms/${message.room_id}/messages/${message.id}">削除
             </a>
             </div> 
             </div>
@@ -33,7 +33,7 @@ $(function(){
             <div class="MessageInfo__userName">
               ${message.user_name}
             </div>
-                <a class="f000" rel="nofollow" data-method="delete" href="/users/${message.user_id}/messages/${message.id}">削除
+                <a class="f000" rel="nofollow" data-method="delete" href="/rooms/${message.room_id}/messages/${message.id}">削除
                 </a>
           </div>
           </div>

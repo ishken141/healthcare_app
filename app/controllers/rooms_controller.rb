@@ -1,11 +1,14 @@
 class RoomsController < ApplicationController
   def index
     @users = User.all 
+    @rooms = Room.all
   end 
-  def destroy 
+  def new 
+    @room = Room.new 
   end 
   def show  
-    @user = User.find(params[:id]) 
+    @room = Room.find(params[:id])
+    @messages = @room.messages.includes(:user)
     @message = Message.new 
   end 
 end
