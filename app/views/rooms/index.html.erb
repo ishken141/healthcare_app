@@ -1,7 +1,9 @@
-<div class="test">
+<div class="test"> 
+<% @rooms.each do |room|%>
+<h5><%= link_to room.box, room_path(room), class: "lead_user"%></h5> 
+<% end %>
 <% @users.each do |user| %> 
-<h5><%= link_to "#{user.name}さん", user_path(user)%>
-<%= link_to "相談する", room_path(user), class: "lead_user"%></h5> 
+<h5><%= link_to "#{user.name}さん", user_path(user)%></h5> 
 <% if user.profile.present? %> 
 <div class="room_certificaton">
 <h5><%= user.profile.certificaton %>

@@ -1,7 +1,7 @@
 <h3 class="message_title">相談室</h3>
 <div class="Chat">  
   <div class="MessageField">      
-        <% @user.messages.each do |message| %> 
+        <% @room.messages.each do |message| %> 
         <div class="MessageInfo__userimage">
         <% if message.user.profile.image.url.present? %> 
         <%= image_tag message.user.profile.image.url, class: "self_image" %>
@@ -18,7 +18,7 @@
         <%= message.user.name %> 
         </div>
         <% if user_signed_in? && current_user.id == message.user_id %>
-        <%= link_to "削除", user_message_path(@user, message), method: :delete, class: "f000" %>
+        <%= link_to "削除", room_message_path(@room, message), method: :delete, class: "f000" %>
         <% end %> 
         </div>
         </div>
@@ -26,7 +26,7 @@
         </div>
   </div>
 <div class="form">
-    <%= form_with model: [@user, @message], local: true, id: "new_comment" do |f| %>
+    <%= form_with model: [@room, @message], local: true, id: "new_comment" do |f| %>
     <%= f.text_field :text, class: "form-area" %> 
     <%= f.submit "コメントする", class: "submit" %>
     <% end %> 
