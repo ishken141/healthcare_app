@@ -51,7 +51,12 @@
     <div class="field">
       <%= f.hidden_field :user_id, :value => @user.id%>
     </div>
-  <% end %>
+  <% end %> 
+  <%= f.fields_for :room do |f| %>
+    <div class="field">
+    <%= f.hidden_field :box, :value => "相談する" %>
+    </div> 
+    <% end %>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

@@ -1,18 +1,13 @@
 <div class="test"> 
-<% @rooms.each do |room|%>
-<h5><%= link_to room.box, room_path(room), class: "lead_user"%></h5> 
-<% end %>
 <% @users.each do |user| %> 
-<h5><%= link_to "#{user.name}さん", user_path(user)%></h5> 
-<% if user.profile.present? %> 
-<div class="room_certificaton">
-<h5><%= user.profile.certificaton %>
-<%= "高評価：３" %></h5> 
-<% end %>
-</div>
+<% user.rooms.each do |room| %>
+<h5><%= link_to "#{user.name}さん", user_path(user)%></h5>
+<h5><%= link_to room.box, room_path(room), class: "lead_user"%></h5> 
 <% if user.profile.present? %> 
 <%= image_tag user.profile.image.url, class: "room_image"%>
 <% else %> 
 <% end %>
 <% end %> 
+<% end %>
 </div>
+
