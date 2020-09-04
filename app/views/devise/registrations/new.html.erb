@@ -24,7 +24,34 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+  </div> 
+
+  <%= f.fields_for :profile do |f| %>
+    <div class="field">
+      <%= f.hidden_field :image, :value => " " %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field :age, :value => " " %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field :certificaton, :value => " " %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field :gender, :value => " " %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field :strong, :value => " " %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field :birthplace, :value => " " %>
+    </div> 
+    <div class="field">
+      <%= f.hidden_field :text, :value => " " %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field :user_id, :value => @user.id%>
+    </div>
+  <% end %>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

@@ -2,9 +2,11 @@
 <% @users.each do |user| %> 
 <h5><%= link_to "#{user.name}さん", user_path(user)%>
 <%= link_to "相談する", room_path(user), class: "lead_user"%></h5> 
+<% if user.profile.present? %> 
 <div class="room_certificaton">
 <h5><%= user.profile.certificaton %>
 <%= "高評価：３" %></h5> 
+<% end %>
 </div>
 <% if user.profile.present? %> 
 <%= image_tag user.profile.image.url, class: "room_image"%>

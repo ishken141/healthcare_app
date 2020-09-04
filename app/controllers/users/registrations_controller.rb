@@ -6,6 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   
   def new 
     @user = User.new 
+    @profile = @user.build_profile 
   end 
   # GET /resource/sign_up
   # def new
@@ -62,7 +63,4 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end 
-  def create　
-    Profile.create(id: 11, image: File.open("./public/images/default.png"), age: 21, certificaton: "test8", gender: "test9", strong: "test10", birthplace: "test11", text: "test12", user_id: "10")
-  end 
 end 
