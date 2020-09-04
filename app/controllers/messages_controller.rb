@@ -1,14 +1,12 @@
 class MessagesController < ApplicationController
-  def create 
+  def create  
     @user = User.find(params[:user_id]) 
-    @message = @user.messages.new 
-    if @message.update(message_params) 
+    @message = Message.create(message_params) 
     respond_to do |format| 
         format.html { redirect_to room_path(@user)} 
         format.json 
       # redirect_to room_path(@user)
     end  
-  end  
 end 
   def destroy 
       @user = User.find(params[:user_id]) 
@@ -18,6 +16,6 @@ end
   end 
   private 
   def message_params  
-    params.require(:message).permit(:text).merge(user_id: current_user.id)
+    params.require(:message).permit(:text, :user_id, :profile_id).merge(user_id: current_user.id)
   end  
 end 
