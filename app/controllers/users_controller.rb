@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   def index  
     @user = User.all 
+  end  
+  def new 
+    @room = Room.new 
   end 
   def show
     @name = current_user.name  

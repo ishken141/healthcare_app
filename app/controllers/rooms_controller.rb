@@ -5,10 +5,18 @@ class RoomsController < ApplicationController
   end 
   def new 
     @room = Room.new 
+  end  
+  def create 
+    @room = Room.create(room_params) 
+    redirect_to root_path 
   end 
   def show  
     @room = Room.find(params[:id])
     @messages = @room.messages.includes(:user)
     @message = Message.new 
-  end 
-end
+  end  
+  private 
+  def room_params 
+    params.require(:room).permit(:box, :user_id, :profile_id).merge(user_id: current_user.id)
+end 
+end 
