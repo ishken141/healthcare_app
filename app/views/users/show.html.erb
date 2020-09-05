@@ -6,7 +6,7 @@
 <div class="mypage_index">
 <%= image_tag @user.profile.image.url, class: "mypage_image" %> 
 <div class="mypage_info">
-<h3 class="mypage"><%= "#{@name}さん" %></h3>
+<h3 class="mypage"><%= "#{@user.name}さん" %></h3>
 <div class="gender"> 
 <label>性別：</label> 
 <%= "#{@user.profile.gender}"%>
@@ -35,6 +35,9 @@
 <label>コメント：</label>
 <%= "#{@user.profile.text}"%> 
 </div> 
+<%= render partial: "follow_button" %>
+<h5>フォロー中：<%= "#{@user.followings.count}"%></h5>
+<h5>フォロワー：<%= "#{@user.followers.count}"%></h5>
 </div> 
 </div> 
 </div>
