@@ -1,20 +1,27 @@
 .wrapper { 
-  margin: auto 150px;
   padding-top:30px;
   font-weight: bold;
 }
 .mypage_index{ 
  width: 100%;
  font-size: 15px;
+ margin-top: 60px; 
+ display: flex; 
  text-align: center;
+ align-items: center;
+ justify-content: center;
+ color: #fff;
+
 } 
 .mypage_image { 
-  width: 100%; 
+  width: 40%; 
+  height: 500px;
   border-radius: 5%;
 
 }
-.mypage_info { 
- display: inline-block;
+.mypage_info {  
+ display: inline;
  text-align: left;
- font-size: 18px;
-}
+ font-size: 20px; 
+ padding-left: 30px;
+} 

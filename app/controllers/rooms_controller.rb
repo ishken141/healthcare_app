@@ -11,12 +11,18 @@ class RoomsController < ApplicationController
     redirect_to root_path 
   end 
   def show  
+    # @rooms = Room.all
     @room = Room.find(params[:id])
     @messages = @room.messages.includes(:user)
     @message = Message.new 
   end  
+  def destroy 
+    @room = Room.find(params[:id])
+    @room.destroy
+    redirect_to root_path
+  end 
   private 
   def room_params 
-    params.require(:room).permit(:box, :user_id, :profile_id).merge(user_id: current_user.id)
+    params.require(:room).permit(:box, :image, :user_id, :profile_id).merge(user_id: current_user.id)
 end 
 end 

@@ -1,8 +1,16 @@
-<div class="new_room">
+<div class="create_room">
 <%= form_with model: @room, local: true do |f| %> 
-<div class="form-group"> 
+<div class="form-room"> 
+<div class="create-name">相談室開設</div>
+<div class="group"> 
 <label>相談室名</label> 
-<%= f.text_field :box, class: "room_group"%> 
-<%= f.submit "開設"%>
+<%= f.text_field :box, id: "room_name", class: "form-control"%> 
+</div>
+<div class="group-background"> 
+<label>背景画像</label> 
+<%= f.file_field :image, id: "background_image_room", class: "form-control"%>
+</div>
+<%= f.submit "開設", class: "btn btn-primary"%>
 <% end %>
+</div> 
 </div>
