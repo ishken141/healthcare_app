@@ -1,6 +1,10 @@
-<h3 class="message_title">相談室</h3>
-<div class="Chat">  
-  <div class="MessageField">      
+<h3 class="message_title">相談室</h3> 
+<% if user_signed_in? && current_user.id == @room.user_id %> 
+<%= link_to "削除", room_path(@room), method: :delete %> 
+<% end %>
+<div class="image_back" style="background-image: url(<%= @room.image %>);">
+<div class="Chat"> 
+  <div class="MessageField">     
         <% @room.messages.each do |message| %> 
         <div class="MessageInfo__userimage">
         <% if message.user.profile.image.url.present? %> 
@@ -32,3 +36,4 @@
     <% end %> 
 </div> 
 </div>
+</div> 
