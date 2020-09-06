@@ -3,7 +3,7 @@ $(function(){
     if ( message.image == "default.png") {
       var html =
         `<div class="MessageInfo__userimage">
-          <img src="/assets/default.png" width="100px" height="100px" style="border-radius: 50%;">
+          <img src="/assets/default.png" width="50px" height="50px" style="border-radius: 50%;">
         </div>
         <div class="MessageBox">
           <div class="Message">
@@ -11,7 +11,7 @@ $(function(){
           </div>
           <div class="MessageInfo">
             <div class="MessageInfo__userName">
-              <p>${message.user_name}</p>
+              <div>${message.user_name}</div>
             </div>
             <a class="f000" rel="nofollow" data-method="delete" href="/rooms/${message.room_id}/messages/${message.id}">削除
             </a>
@@ -23,7 +23,7 @@ $(function(){
     else {
       var html =
         `<div class="MessageInfo__userimage">
-          <img src="${message.image}" width="100px" height="100px" style="border-radius: 50%;">
+          <img src="${message.image}" width="50px" height="50px" style="border-radius: 50%;">
         </div>
         <div class="MessageBox">
           <div class="Message">

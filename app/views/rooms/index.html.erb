@@ -4,7 +4,7 @@
 <div class="user_index">
 <%= link_to room.box, user_room_path(user.id, room.id), class: "lead_user"%> 
 <div class="user_info"><%= link_to "#{user.name}さん", user_path(user)%>
-<%= link_to "フォロワー：#{user.followers.count}" %></div>
+<%= link_to "フォロワー #{user.followers.count}" %></div>
 <% if user.profile.present? %> 
 <%= image_tag user.profile.image.url, class: "room_image"%>
 <% else %> 

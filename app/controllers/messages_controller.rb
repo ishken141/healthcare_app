@@ -14,7 +14,7 @@ end
       @room = Room.find(params[:room_id])
       @message = @room.messages.find(params[:id]) 
       @message.delete 
-      redirect_to room_path(@room)
+      redirect_to root_path
   end 
   private 
   def message_params  
