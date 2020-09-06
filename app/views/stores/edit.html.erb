@@ -1,0 +1,24 @@
+<div class="create_store">
+<%= form_with model: [@user, @store], local: true do |f| %> 
+<div class="form-store"> 
+<div class="create-name">店舗開設</div>
+<div class="group"> 
+<label>店舗名</label> 
+<%= f.text_field :name, id: "store_name", class: "form-control"%> 
+</div>
+<div class="group"> 
+<label>電話番号</label> 
+<%= f.text_field :tell, id: "store_name", class: "form-control"%> 
+</div> 
+<div class="group"> 
+<label>住所</label> 
+<%= f.text_field :address, id: "store_address", class: "form-control"%> 
+</div> 
+<div class="group"> 
+<label>スケジュール</label> 
+<%= f.text_area :schedule, id: "store_schedule", class: "form-control"%> 
+</div>
+<%= f.submit "開設", class: "btn btn-primary"%>
+<% end %>
+</div> 
+</div>
