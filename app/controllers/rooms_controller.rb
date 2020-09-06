@@ -11,7 +11,7 @@ class RoomsController < ApplicationController
     redirect_to root_path 
   end 
   def show  
-    # @rooms = Room.all
+    @user = User.find(params[:id]) 
     @room = Room.find(params[:id])
     @messages = @room.messages.includes(:user)
     @message = Message.new 

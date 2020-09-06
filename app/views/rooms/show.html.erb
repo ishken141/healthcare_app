@@ -1,7 +1,8 @@
 <h3 class="message_title">相談室</h3> 
 <% if user_signed_in? && current_user.id == @room.user_id %> 
 <%= link_to "削除", room_path(@room), method: :delete %> 
-<% end %>
+<% end %> 
+<%= link_to "#{@room.user.name}"%> 
 <div class="image_back" style="background-image: url(<%= @room.image %>);">
 <div class="Chat"> 
   <div class="MessageField">     
