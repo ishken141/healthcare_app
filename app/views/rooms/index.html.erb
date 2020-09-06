@@ -2,8 +2,8 @@
 <% @users.each do |user| %> 
 <% user.rooms.each do |room| %>
 <div class="user_index">
-<div class="user_info"><%= link_to "#{user.name}さん", user_path(user)%>
 <%= link_to room.box, room_path(room), class: "lead_user"%> 
+<div class="user_info"><%= link_to "#{user.name}さん", user_path(user)%>
 <%= link_to "フォロワー：#{user.followers.count}" %></div>
 <% if user.profile.present? %> 
 <%= image_tag user.profile.image.url, class: "room_image"%>
