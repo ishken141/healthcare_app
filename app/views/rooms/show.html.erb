@@ -1,12 +1,12 @@
-<h3 class="message_title">相談室</h3> 
+<%= link_to "#{@room.user.name}さんのストア情報", user_store_path(@user) %> 
+<h3 class="message_title"><%= @room.box %></h3> 
 <% if user_signed_in? && current_user.id == @room.user_id %> 
 <%= link_to "削除", room_path(@room), method: :delete %> 
 <% end %> 
-<%= link_to "#{@room.user.name}さんのストアリンク", user_store_path(@user) %> 
-<% @user.rooms.each do |room| %>
-<div class="image_back" style="background-image: url(<%= room.image %>);"> 
-<% end %>
 <div class="Chat"> 
+<div class="message_image">
+<%= image_tag @room.image.url, class: "message_image_first" %>  
+</div>
   <div class="MessageField">     
         <% @room.messages.each do |message| %> 
         <div class="MessageInfo__userimage">

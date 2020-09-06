@@ -1,22 +1,25 @@
-.image_back{ 
-    background-size: cover;
-    height: 800px;
-}
 .message_title { 
     text-align: center;
     font-weight: bold;
+    color: #fff;
 }
 .Chat {
-    width: 90%;
-    // height: 300px;
-    // display: inline-block;
-    margin-top: 60px;
-    margin-left: 80px;
+    display: flex; 
+    justify-content: flex-end;
+} 
+.message_image { 
+    width: 50%;
+    margin-top: 120px;
+    margin-left: 10px;
+} 
+.message_image_first { 
+    width: 500px;
+    border-radius: 10px;
 }
 
 .self_image {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     img {
     object-fit: cover;
@@ -24,17 +27,17 @@
 }
 
 .MessageField {
-    width: 100%;
-    padding: 10px;
+    width: 50%;
+    margin-top: 60px; 
 }
 
 .MessageBox {
     background-color: #ddeeff;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     padding: 10px;
     color: #2f2725;
     border-radius: 3px;
-    width: 100%;
+    width: 80%;
     position: relative;
     margin-top: 15px;
 }
@@ -65,17 +68,17 @@
 }
 
 .Message{
-    font-size: 15px;
+    font-size: 13px;
     width: 100%;
 }
 
 .MessageInfo{
-    width: 100%;
+    width: 100%; 
+    font-size: 12px;
     display: flex;
     justify-content: flex-end;
-    font-weight: bold;
-    &__userName {
-    font-size: 15px; 
+    font-weight: normal;
+    &__userName { 
     }
     &__userEdit {
     display: inline;
@@ -84,22 +87,22 @@
 }
 .form { 
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     .form-area {
-    height: 57px;
+    height: 40px;
     font-size: 15px;
     padding: 5px;
-    width: 600px;
-    border: 4px solid #000;
+    width: 300px;
+    border: 1px solid #000;
     }
     .submit {
-    height: 57px;
-    font-size: 13px;
-    font-weight: bold;
+    height: 40px;
+    font-size: 12px;
+    font-weight: normal;
+    margin-right: 110px;
     color: #000; 
-    float: right;
     background-color: #ddeeff;
-    border: 4px solid #000;
+    border: １px solid #000;
     } 
 
 }
