@@ -1,9 +1,39 @@
 <% if user_signed_in? && current_user.id == @room.user_id %> 
 <%= link_to "ストアリンクを編集", edit_user_store_path(@user.id, @store.id) %> 
-<% end %>
-<% if @store %>
-<%= @store.name %> 
-<%= @store.tell %> 
+<% end %> 
+<% if @store %>  
+<div class="store_main">
+  <% if @user.store.image.url.present? %> 
+  <%= image_tag @user.store.image.url, class: "store_image" %>
+  <% end %> 
+  <div class="form-info">
+<table class="table">
+  <thead>
+    <tr>
+      <th>ストア情報</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table">
+      <td>店舗名</td>
+      <td><%= @store.name %></td>
+    </tr>
+    <tr>
+      <td>電話番号</td>
+      <td><%= @store.tell %></td>
+    </tr>
+    <tr>
+      <td>住所</td>
+      <td><%= @store.address %></td>
+    </tr> 
+    <tr>
+      <td>勤務時間</td>
+      <td><%= @store.schedule %></td>
+    </tr>
+  </tbody>
 <% else %> 
 <p>まだストアリンクはありません</p>
-<% end %>
+<% end %> 
+</div> 
+</div>

@@ -1,5 +1,5 @@
 <div class="create_room">
-<%= form_with model: @room, local: true do |f| %> 
+<%= form_with model: [@user, @room], local: true do |f| %> 
 <div class="form-room"> 
 <div class="create-name">相談室開設</div>
 <div class="group"> 

@@ -7,16 +7,16 @@ class StoresController < ApplicationController
     @store = Store.find(params[:id]) 
     @user = User.find(params[:user_id]) 
     if @store.update(store_params)
-      redirect_to root_path 
+      redirect_to user_store_path(@user, @store) 
   end   
 end 
   def show 
-    @room = Room.find(params[:id]) 
     @user = User.find(params[:user_id])
+    @room = Room.find(params[:id]) 
     @store = @user.store 
   end 
   private 
   def store_params 
-    params[:store].permit(:name, :tell, :address, :schedule, :profile_id, :user_id).merge(user_id: current_user.id)
+    params[:store].permit(:image, :name, :tell, :address, :schedule, :profile_id, :user_id).merge(user_id: current_user.id)
 end 
 end
