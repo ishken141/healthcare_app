@@ -12,7 +12,7 @@ class RoomsController < ApplicationController
   end 
   def show  
     @user = User.find(params[:id]) 
-    @room = Room.find(params[:id])
+    @room = Room.find(params[:id]) 
     @messages = @room.messages.includes(:user)
     @message = Message.new 
   end  
@@ -23,6 +23,6 @@ class RoomsController < ApplicationController
   end 
   private 
   def room_params 
-    params.require(:room).permit(:box, :image, :user_id, :profile_id).merge(user_id: current_user.id)
+    params.require(:room).permit(:box, :image, :user_id, :profile_id, :store_id).merge(user_id: current_user.id)
 end 
 end 

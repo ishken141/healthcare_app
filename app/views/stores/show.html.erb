@@ -1,0 +1,9 @@
+<% if user_signed_in? && current_user.id == @room.user_id %> 
+<%= link_to "ストアリンクを編集", edit_user_store_path(@user.id, @store.id) %> 
+<% end %>
+<% if @store %>
+<%= @store.name %> 
+<%= @store.tell %> 
+<% else %> 
+<p>まだストアリンクはありません</p>
+<% end %>

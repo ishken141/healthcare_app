@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_05_151228) do
+ActiveRecord::Schema.define(version: 2020_09_06_015518) do
 
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -62,6 +62,17 @@ ActiveRecord::Schema.define(version: 2020_09_05_151228) do
     t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 
+  create_table "stores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "tell"
+    t.string "address"
+    t.text "schedule"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_stores_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", default: "", null: false
@@ -82,4 +93,5 @@ ActiveRecord::Schema.define(version: 2020_09_05_151228) do
   add_foreign_key "relationships", "users"
   add_foreign_key "relationships", "users", column: "follow_id"
   add_foreign_key "rooms", "users"
+  add_foreign_key "stores", "users"
 end
