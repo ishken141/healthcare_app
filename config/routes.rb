@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     end 
     resources :stores
     member do 
-    get :followings, :followers
+    get :followings, :followers, :count 
     end 
   end 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

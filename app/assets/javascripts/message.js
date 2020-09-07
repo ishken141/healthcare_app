@@ -62,7 +62,7 @@ $(function(){
         $('.MessageField').append(html);
       }
       $('.form-area').val('');
-      $('.submit').prop('disabled', false);
+      $('#submit').prop('disabled', false);
     })
     .fail(function(){
       alert('error');

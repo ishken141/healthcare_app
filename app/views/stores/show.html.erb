@@ -1,6 +1,6 @@
 <% if user_signed_in? && current_user.id == @room.user_id %> 
   <% if @store %>
-<%= link_to "ストアリンク削除", user_store_path(@user, @store), method: :delete %> 
+<%= link_to "ストア情報削除", user_store_path(@user, @store), method: :delete %> 
   <% else %>
 <%= link_to "ストア情報作成", new_user_store_path(@user) %> 
 <% end %>
@@ -32,8 +32,9 @@
       <td><%= @store.address %></td>
     </tr> 
     <tr>
-      <td>勤務時間</td>
-      <td><%= @store.schedule %></td>
+      <td>店舗URL</td>
+      <td>	
+    <a href><%= @store.schedule %></a>
     </tr>
   </tbody>
 <% else %> 
