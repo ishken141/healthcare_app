@@ -11,7 +11,7 @@
     width: 50%;
     margin-top: 120px;
     margin-left: 10px;
-    margin-right: 5px;
+    margin-right: 10px;
 } 
 .message_image_first { 
     width: 100%;
@@ -33,7 +33,7 @@
 }
 
 .MessageBox {
-    background-color: #ddeeff;
+    background-color: #fff;
     margin-bottom: 25px;
     padding: 10px;
     color: #2f2725;
@@ -52,7 +52,7 @@
     left: 0px;
     top: -15px;
     border-right: 15px solid transparent;
-    border-bottom: 15px solid   #ddeeff;
+    border-bottom: 15px solid   #fff;
     border-left: 15px solid transparent;
 }
 .MessageBox::after{
@@ -64,7 +64,7 @@
     left: 0px;
     top: -12px;
     border-right: 15px solid transparent;
-    border-bottom: 15px solid   #ddeeff;
+    border-bottom: 15px solid   #fff;
     border-left: 15px solid transparent;
 }
 
@@ -94,16 +94,12 @@
     font-size: 15px;
     padding: 5px;
     border: 1px solid #000;
+    border-radius: 5px;
     width: 300px;
-    margin-left: 420px;
+    margin-left: 450px;
     }
-    .submit {
+    #submit {
     height: 40px;
-    font-size: 12px;
-    font-weight: normal;
-    color: #000; 
-    background-color: #ddeeff;
-    border: １px solid #000;
     } 
 
 }

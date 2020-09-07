@@ -6,7 +6,6 @@ class UsersController < ApplicationController
     @room = Room.new 
   end 
   def show
-    # @name = @user.name  
     @user = User.find(params[:id]) 
     @profile = Profile.find_by(user_id: @user.id)
   end 
@@ -17,5 +16,9 @@ class UsersController < ApplicationController
   def followings
     @user = User.find(params[:id])
     @users = @user.followings
-  end
+  end 
+  def count 
+    @user = User.find(params[:id])
+    @rooms = @user.rooms
+  end 
 end

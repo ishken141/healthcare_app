@@ -35,7 +35,7 @@
 <div class="form">
     <%= form_with model: [@room, @message], local: true, id: "new_comment" do |f| %>
     <%= f.text_field :text, class: "form-area" %> 
-    <%= f.submit "コメントする", class: "submit" %>
+    <%= f.submit "コメントする", class: "btn btn-primary", id: "submit" %>
     <% end %> 
 </div> 
 </div>
