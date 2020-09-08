@@ -1,16 +1,21 @@
-<div class="test"> 
+<div class="room_all"> 
+<div class="container">
+<div class="room_title">カウンセラー一覧</div>
 <% @users.each do |user| %> 
-<% user.rooms.each do |room| %>
-<div class="user_index">
-<%= link_to room.box, user_room_path(user.id, room.id), class: "lead_user"%> 
+<% user.rooms.each do |room| %> 
+<div class="user_index"> 
 <div class="user_info"><%= link_to "#{user.name}さん", user_path(user)%>
+<div class="user_box">
+<%= link_to room.box, user_room_path(user.id, room.id), class: "lead_user"%>  
+</div>
 <%= link_to "フォロワー #{user.followers.count}" %></div>
 <% if user.profile.present? %> 
 <%= image_tag user.profile.image.url, class: "room_image"%>
 <% else %> 
+</div> 
 </div>
 <% end %>
 <% end %> 
 <% end %>
-</div>
-
+</div> 
+</div> 
