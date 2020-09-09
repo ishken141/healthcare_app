@@ -14,6 +14,7 @@
 <div class="follow_info"> 
 <%= link_to "#{user.name}", user_path(user), method: :get %> 
 <%= link_to "#{user.profile.certificaton}" %> 
+<%= link_to room.box, user_room_path(user.id, room.id), class: "room_index"%> 
 </div>
 <% end %> 
 <% end %>

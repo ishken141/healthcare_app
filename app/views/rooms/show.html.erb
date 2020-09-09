@@ -1,7 +1,7 @@
 <%= link_to "#{@room.user.name}さんのストア情報", user_store_path(@user) %> 
 <h3 class="message_title"><%= @room.box %></h3> 
 <% if user_signed_in? && current_user.id == @room.user_id %> 
-<%= link_to "削除", room_path(@room), method: :delete %> 
+<%= link_to "削除", room_path(@room), method: :delete, class: "btn btn-outline-dark", id: "room_delete", data: { confirm: "本当に削除しますか？"} %> 
 <% end %> 
 <div class="Chat"> 
 <div class="message_image">
