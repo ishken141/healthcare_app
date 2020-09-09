@@ -1,7 +1,7 @@
 class RoomsController < ApplicationController
   def index
-    @users = User.all 
-    @rooms = Room.all
+    @users = User.all.order('created_at DESC') 
+    @rooms = Room.includes(:user)
   end 
   def new 
     @user = User.find(params[:user_id]) 
@@ -22,6 +22,9 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     @room.destroy
     redirect_to root_path
+  end 
+  def search  
+    @search = Room.search(params[:keyword])
   end 
   private 
   def room_params 

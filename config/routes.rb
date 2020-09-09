@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   root "rooms#index" 
   resources :rooms, only: [:index, :new, :create, :destroy, :show]  do 
   resources :messages, only: [:create, :destroy]  
+  collection do 
+    get "search" 
+  end 
   end 
   resources :users, only: :show do 
     resources :profiles, only: [:edit, :update]   
