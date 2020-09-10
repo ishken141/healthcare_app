@@ -1,8 +1,8 @@
 <% if user_signed_in? && current_user.id == @room.user_id %> 
 <% if @store %>
-  <%= link_to "ストア情報削除", user_store_path(@user, @store), method: :delete %> 
+  <%= link_to "店舗情報削除", user_store_path(@user, @store), method: :delete %> 
 <% else %>
-  <%= link_to "ストア情報作成", new_user_store_path(@user) %> 
+  <%= link_to "店舗情報作成", new_user_store_path(@user) %> 
 <% end %>
 <% end %> 
 <% if @store %>  
@@ -14,7 +14,7 @@
 <table class="table">
   <thead>
     <tr>
-      <th>ストア情報</th>
+      <th>店舗情報</th>
       <th></th>
     </tr>
   </thead>
@@ -38,7 +38,7 @@
     </tr>
   </tbody>
 <% else %> 
-  <h5 class="store_none">まだストア情報はありません</h5>
+  <h5 class="store_none">まだ店舗情報はありません</h5>
 <% end %> 
 </div> 
 </div>
