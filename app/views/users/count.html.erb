@@ -1,13 +1,13 @@
 <div class="count_all"> 
 <div class="count_title">相談室一覧</div>
-<% @rooms.each do |room| %> 
+  <% @rooms.each do |room| %> 
 <div class="count_index">
 <div class="count_name">
-<%= link_to room.box, user_room_path(@user.id, room.id)%> 
+  <%= link_to room.box, user_room_path(@user.id, room.id)%> 
 </div> 
 <div class="count_image">
-<%= image_tag room.image.url, height: "35%", width: "45%", class: "count_image"%> 
+  <%= image_tag room.image.url, height: "35%", width: "45%", class: "count_image"%> 
 </div> 
 </div>
-<% end %> 
+  <% end %> 
 </div>

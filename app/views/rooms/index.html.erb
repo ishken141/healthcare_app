@@ -1,22 +1,22 @@
-<div class="title">オンライン相談</div>
+<div class="title">オンライン相談中</div>
 <div class="follow_all"> 
 <div class="container"> 
 <div class="form-group">
-<%= form_with(url: search_rooms_path, local: true, method: :get) do |f| %>
+  <%= form_with(url: search_rooms_path, local: true, method: :get) do |f| %>
   <%= f.text_field :keyword, placeholder: "相談室を検索する", class: "form-control", id: "search_text"%>
   <%= f.submit "検索", class: "btn btn-primary", id: "search_button"%>
-<% end %>
+  <% end %>
 </div>
-<% @users.each do |user| %> 
-<% user.rooms.each do |room| %> 
+  <% @users.each do |user| %> 
+  <% user.rooms.each do |room| %> 
 <div class="follow_index">
-<%= image_tag user.profile.image.url, class: "follow_image" %> 
+  .profile.image.url, class: "follow_image" %> 
 <div class="follow_info"> 
-<%= link_to "#{user.name}", user_path(user), method: :get %> 
-<%= link_to "#{user.profile.certificaton}" %> 
-<%= link_to room.box, user_room_path(user.id, room.id), class: "room_index"%> 
+  <%= link_to "#{user.name}", user_path(user), method: :get %> 
+  <%= link_to "#{user.profile.certificaton}" %> 
+  <%= link_to room.box, user_room_path(user.id, room.id), class: "room_index"%> 
 </div>
-<% end %> 
-<% end %>
+  <% end %> 
+  <% end %>
 </div> 
 </div>

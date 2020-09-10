@@ -1,16 +1,16 @@
 <% if user_signed_in? && current_user.id == @room.user_id %> 
-  <% if @store %>
-<%= link_to "ストア情報削除", user_store_path(@user, @store), method: :delete %> 
-  <% else %>
-<%= link_to "ストア情報作成", new_user_store_path(@user) %> 
+<% if @store %>
+  <%= link_to "ストア情報削除", user_store_path(@user, @store), method: :delete %> 
+<% else %>
+  <%= link_to "ストア情報作成", new_user_store_path(@user) %> 
 <% end %>
 <% end %> 
 <% if @store %>  
 <div class="store_main">
-  <% if @user.store.image.url.present? %> 
+<% if @user.store.image.url.present? %> 
   <%= image_tag @user.store.image.url, class: "store_image" %>
-  <% end %> 
-  <div class="form-info">
+<% end %> 
+<div class="form-info">
 <table class="table">
   <thead>
     <tr>
@@ -38,7 +38,7 @@
     </tr>
   </tbody>
 <% else %> 
-<h5 class="store_none">まだストア情報はありません</h5>
+  <h5 class="store_none">まだストア情報はありません</h5>
 <% end %> 
 </div> 
 </div>

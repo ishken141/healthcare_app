@@ -1,30 +1,30 @@
 <div class="create_store"> 
 <div class="create_info">
-<%= form_with model: [@user, @store], local: true do |f| %> 
+  <%= form_with model: [@user, @store], local: true do |f| %> 
 <div class="form-store"> 
 <div class="create-name">店舗開設</div> 
 <div class="group">
-<label>店舗写真</label>
-<%= f.file_field :image, id: "store_name", class: "form-control" %> 
+  <label>店舗写真</label>
+  <%= f.file_field :image, id: "store_name", class: "form-control" %> 
 </div>
 <div class="group"> 
-<label>店舗名</label> 
-<%= f.text_field :name, id: "store_name", class: "form-control"%> 
+  <label>店舗名</label> 
+  <%= f.text_field :name, id: "store_name", class: "form-control"%> 
 </div>
 <div class="group"> 
-<label>電話番号</label> 
-<%= f.text_field :tell, id: "store_name", class: "form-control"%> 
+  <label>電話番号</label> 
+  <%= f.text_field :tell, id: "store_name", class: "form-control"%> 
 </div> 
 <div class="group"> 
-<label>住所</label> 
-<%= f.text_field :address, id: "store_address", class: "form-control"%> 
+  <label>住所</label> 
+  <%= f.text_field :address, id: "store_address", class: "form-control"%> 
 </div> 
 <div class="group"> 
-<label>店舗URL</label> 
-<%= f.url_field :schedule, id: "store_schedule", class: "form-control"%> 
+  <label>店舗URL</label> 
+  <%= f.url_field :schedule, id: "store_schedule", class: "form-control"%> 
 </div>
-<%= f.submit "開設", class: "btn btn-primary"%>
-<% end %>
+  <%= f.submit "開設", class: "btn btn-primary"%>
+  <% end %>
 </div> 
 </div> 
 </div>

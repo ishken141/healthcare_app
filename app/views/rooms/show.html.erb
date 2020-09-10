@@ -1,42 +1,42 @@
-<%= link_to "#{@room.user.name}さんのストア情報", user_store_path(@user) %> 
-<h3 class="message_title"><%= @room.box %></h3> 
-<% if user_signed_in? && current_user.id == @room.user_id %> 
-<%= link_to "削除", room_path(@room), method: :delete, class: "btn btn-outline-dark", id: "room_delete", data: { confirm: "本当に削除しますか？"} %> 
-<% end %> 
+  <%= link_to "#{@room.user.name}さんのストア情報", user_store_path(@user) %> 
+  <h3 class="message_title"><%= @room.box %></h3> 
+  <% if user_signed_in? && current_user.id == @room.user_id %> 
+  <%= link_to "削除", room_path(@room), method: :delete, class: "btn btn-outline-dark", id: "room_delete", data: { confirm: "本当に削除しますか？"} %> 
+  <% end %> 
 <div class="Chat"> 
 <div class="message_image">
-<%= image_tag @room.image.url, class: "message_image_first" %>  
+  <%= image_tag @room.image.url, class: "message_image_first" %>  
 </div>
-  <div class="MessageField">     
-        <% @room.messages.each do |message| %> 
-        <div class="MessageInfo__userimage">
-        <% if message.user.profile.image.url.present? %> 
-        <%= image_tag message.user.profile.image.url, class: "self_image" %>
-        <% else %> 
-        <%= image_tag "default.png", class: "self_image" %>
-        <% end %>
-        </div>
-        <div class="MessageBox">
-        <div class="Message">
-        <%= message.text %>  
-        </div> 
-        <div class="MessageInfo">
-        <div class="MessageInfo__user_name">
-        <%= message.user.name %> 
-        </div>
-        <% if user_signed_in? && current_user.id == message.user_id %>
-        <%= link_to "削除", room_message_path(@room, message), method: :delete, class: "f000" %>
-        <% end %> 
-        </div>
-        </div>
-        <% end %>  
-        </div> 
-        </div>
+<div class="MessageField">     
+  <% @room.messages.each do |message| %> 
+<div class="MessageInfo__userimage">
+  <% if message.user.profile.image.url.present? %> 
+  <%= image_tag message.user.profile.image.url, class: "self_image" %>
+  <% else %> 
+  <%= image_tag "default.png", class: "self_image" %>
+  <% end %>
+</div>
+<div class="MessageBox">
+<div class="Message">
+  <%= message.text %>  
+</div> 
+<div class="MessageInfo">
+<div class="MessageInfo__user_name">
+  <%= message.user.name %> 
+</div>
+  <% if user_signed_in? && current_user.id == message.user_id %>
+  <%= link_to "削除", room_message_path(@room, message), method: :delete, class: "f000" %>
+  <% end %> 
+</div>
+</div>
+  <% end %>  
+</div> 
+</div>
 <div class="form">
-    <%= form_with model: [@room, @message], local: true, id: "new_comment" do |f| %>
-    <%= f.text_field :text, class: "form-area" %> 
-    <%= f.submit "コメントする", class: "btn btn-primary", id: "submit" %>
-    <% end %> 
+  <%= form_with model: [@room, @message], local: true, id: "new_comment" do |f| %>
+  <%= f.text_field :text, class: "form-area" %> 
+  <%= f.submit "コメントする", class: "btn btn-primary", id: "submit" %>
+  <% end %> 
 </div> 
 </div>
 </div>  
