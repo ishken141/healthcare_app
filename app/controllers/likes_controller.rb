@@ -1,4 +1,3 @@
-
 class LikesController < ApplicationController 
   def create  
     @user = User.find(params[:user_id])
@@ -17,5 +16,5 @@ class LikesController < ApplicationController
       format.html { redirect_to room_path(@user) }
       format.js
     end
-  end  
+  end   
 end

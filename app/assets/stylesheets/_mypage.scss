@@ -1,6 +1,10 @@
 .wrapper { 
   padding-top:30px;
   font-weight: bold;
+} 
+#follow_alert { 
+  margin: 10px; 
+  font-weight: bold;
 }
 
 .mypage_index{ 
@@ -18,7 +22,7 @@
   width: 40%; 
   height: 500px;
   border-radius: 5%;
-}
+} 
 
 .mypage_info {  
   display: inline;

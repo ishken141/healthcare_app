@@ -2,4 +2,7 @@
   <%= link_to "自己紹介編集", edit_user_profile_path(@user.id, @profile.id) %> 
   <%= link_to "相談室作成", new_user_room_path(@user)%> 
 <% end %> 
-  <%= link_to "相談室一覧", count_user_path(@user)%> 
+  <%= link_to "相談室一覧", count_user_path(@user), class: "mypage_room_index"%> 
+  <% if flash[:info] %> 
+    <p class="text-info" id="follow_alert"><%= flash[:info]%>
+  <% end %>

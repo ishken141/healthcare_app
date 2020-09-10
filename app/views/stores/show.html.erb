@@ -1,6 +1,6 @@
 <% if user_signed_in? && current_user.id == @room.user_id %> 
 <% if @store %>
-  <%= link_to "店舗情報削除", user_store_path(@user, @store), method: :delete %> 
+  <%= link_to "店舗情報削除", user_store_path(@user, @store), method: :delete, data: { confirm: "本当に削除しますか？"} %> 
 <% else %>
   <%= link_to "店舗情報作成", new_user_store_path(@user) %> 
 <% end %>
