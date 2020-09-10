@@ -1,44 +1,44 @@
 <% if user_signed_in? && current_user.id == @user.id %>
-<%= link_to "自己紹介編集", edit_user_profile_path(@user.id, @profile.id) %> 
-<%= link_to "相談室作成", new_user_room_path(@user)%> 
+  <%= link_to "自己紹介編集", edit_user_profile_path(@user.id, @profile.id) %> 
+  <%= link_to "相談室作成", new_user_room_path(@user)%> 
 <% end %> 
-<%= link_to "相談室一覧", count_user_path(@user)%> 
+  <%= link_to "相談室一覧", count_user_path(@user)%> 
 <div class="wrapper">
 <div class="mypage_index">
-<%= image_tag @user.profile.image.url, class: "mypage_image" %> 
+  <%= image_tag @user.profile.image.url, class: "mypage_image" %> 
 <div class="mypage_info">
-<h3 class="mypage"><%= "#{@user.name}さん" %></h3>
+  <h3 class="mypage"><%= "#{@user.name}さん" %></h3>
 <div class="gender"> 
-<label>性別：</label> 
-<%= "#{@user.profile.gender}"%>
+  <label>性別：</label> 
+  <%= "#{@user.profile.gender}"%>
 </div>
 <div class="age"> 
-<label>年齢：</label>
-<%= "#{@user.profile.age}" %> 
+  <label>年齢：</label>
+  <%= "#{@user.profile.age}" %> 
 </div>
 <div class="birthplace">
-<label>出身：</label>
-<%= "#{@user.profile.birthplace}"%> 
+  <label>出身：</label>
+  <%= "#{@user.profile.birthplace}"%> 
 </div> 
 <div class="certificaton">
-<label>資格：</label>
-<%= "#{@user.profile.certificaton}" %>
+  <label>資格：</label>
+  <%= "#{@user.profile.certificaton}" %>
 </div> 
 <div class="strong">
-<label>得意分野：</label>
-<%= "#{@user.profile.strong}" %> 
+  <label>得意分野：</label>
+  <%= "#{@user.profile.strong}" %> 
 </div> 
 <div class="birthplace">
-<label>出身：</label>
-<%= "#{@user.profile.birthplace}"%> 
+  <label>出身：</label>
+  <%= "#{@user.profile.birthplace}"%> 
 </div> 
 <div class="text">
-<label>コメント：</label>
-<%= "#{@user.profile.text}"%> 
+  <label>コメント：</label>
+  <%= "#{@user.profile.text}"%> 
 </div> 
-<%= render partial: "follow_button" %>
-<%= link_to "フォロー：#{@user.followings.count}", followings_user_path(@user), class: "following_count"%></br>
-<%= link_to "フォロワー：#{@user.followers.count}", followers_user_path(@user), class: "follower_count"%>
+  <%= render partial: "follow_button" %>
+  <%= link_to "フォロー：#{@user.followings.count}", followings_user_path(@user), class: "following_count"%></br>
+  <%= link_to "フォロワー：#{@user.followers.count}", followers_user_path(@user), class: "follower_count"%>
 </div> 
 </div> 
 </div>
