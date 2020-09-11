@@ -1,57 +1,33 @@
-# ヘルスケアカウンセリングシェア
+# アプリ名 
+ ドラッグストア&カウンセリング
 
-このアプリは
+ ヘルスケアカウンセリング専用SNSです。
+ 相談室を開設し、お客様とのコミュニケーションを取りながら悩みや症状の改善を図るアプリです。
  
-# DEMO
+# デモ
  
 "hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
  
-# Features
+# 特徴 
+
+  ユーザーのフォロー、フォロワー機能を実装している為、信用度が可視化出来る。
+  またユーザーごとに店舗情報の作成が出来る為、来店に繋げられるような仕組みになっている。
+
+# 作成意図
+  前職で、ドラッグストア業界に勤務していた時、店舗の接客以外でお客様に役立ち、店舗従業員もモチベーションが上がるような仕組みが出来ないか考え、作成した。
+
+# 開発環境
+  ruby 2.6.5
+  Rails 6.0.3.2
+  mysql 5.6.47
+
+# インストール方法
+  git clone https://github.com/ishken141/matching_app.git
+  cd projects/matching_app 
+
+# 作成情報
  
-"hoge"のセールスポイントや差別化などを説明する
- 
-# Requirement
- 
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
-* huga 3.5.2
-* hogehuga 1.0.2
- 
-# Installation
- 
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-```bash
-pip install huga_package
-```
- 
-# Usage
- 
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
- 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
- 
-# Note
- 
-注意点などがあれば書く
- 
-# Author
- 
-作成情報を列挙する
- 
-* 作成者
-* 所属
-* E-mail
- 
-# License
-ライセンスを明示する
- 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
- 
-社内向けなら社外秘であることを明示してる
- 
-"hoge" is Confidential.
+  作成者 石井健太郎
+  作成期間 5日
+  一日の作業時間 4時間
+  作成人数 １人
