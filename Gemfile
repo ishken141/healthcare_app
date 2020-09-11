@@ -64,5 +64,5 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem "fog-aws"
 group :production do
-  gem 'pg'
+gem 'pg', '~> 0.19.0', group: :production
 end
