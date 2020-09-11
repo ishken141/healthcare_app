@@ -4,16 +4,19 @@
   font-size: 22px; 
   font-weight: bold; 
   color: #005b8f
-}
+} 
 #search_text { 
   display: inline;
-  width: 64%; 
-  margin-left: 120px;
+  width: 51%; 
+  margin-left: 150px; 
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 #search_button { 
   float: right;
   display: inline; 
-  margin-right: 150px;
+  margin-right: 300px;
+  margin-top: 30px;
 } 
 .room_index { 
   padding-left: 10px;
