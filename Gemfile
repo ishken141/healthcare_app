@@ -62,6 +62,7 @@ gem 'font-awesome-sass', "~> 5.0.0"
 gem "pry-rails"
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+gem "fog-aws"
 group :production do
   gem 'pg'
 end
