@@ -6,7 +6,7 @@
  
 # デモ
  
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
+[![Image from Gyazo](https://i.gyazo.com/5a06d922e4c05f1f8ae6f66b78513176.gif)](https://gyazo.com/5a06d922e4c05f1f8ae6f66b78513176)
  
 # 特徴 
 
