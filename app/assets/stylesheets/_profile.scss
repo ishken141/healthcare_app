@@ -1,10 +1,10 @@
 .form-main { 
   text-align: center;
-  color: #005b8f
+  color: #005b8f;
 }
 .form-info { 
   display: inline-block;
-  text-align: left;
+  text-align: left; 
 } 
 .self-info { 
   margin: 30px auto;
@@ -14,4 +14,7 @@
 .form-group { 
   margin-bottom: 25px;
   font-size: 20px;
+} 
+.form-control { 
+  margin-bottom: 10px;
 }

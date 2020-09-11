@@ -9,13 +9,14 @@
 .form-group { 
   display: flex;
   justify-content: center;
-  position: relative;
   width: 100%;
+} 
+.search-text { 
+  display: inline;
 }
-#search_button { 
-  position: absolute;
-  right: 360px; 
-  top: 0px;
+.search-submit { 
+  float: right; 
+  display: inline;
 } 
 .room_index { 
   padding-left: 10px;
