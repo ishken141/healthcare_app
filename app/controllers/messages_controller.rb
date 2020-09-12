@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
   def destroy   
       @message = @room.messages.find(params[:id]) 
       @message.delete 
-      redirect_to root_path
+      redirect_to rooms_path
   end 
 
   def set_room 

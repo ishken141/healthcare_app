@@ -9,7 +9,7 @@ class StoresController < ApplicationController
     @store = Store.create 
     if @store.update(store_params) 
       flash[:success] = "作成しました！"  
-      redirect_to root_path
+      redirect_to rooms_path 
     end  
   end  
 
@@ -18,7 +18,7 @@ class StoresController < ApplicationController
     @store = Store.find(params[:id])
     if @store.destroy
       flash[:danger] = "削除しました!"  
-      redirect_to root_path
+      redirect_to rooms_path
     end 
   end 
 

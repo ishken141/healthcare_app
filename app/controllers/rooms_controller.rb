@@ -31,7 +31,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     @room.destroy
     flash[:danger] = "削除しました!" 
-    redirect_to root_path
+    redirect_to rooms_path
   end 
 
   def search  

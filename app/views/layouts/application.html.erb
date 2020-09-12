@@ -5,13 +5,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %> 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "application" %> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
-
   <body> 
     <% if user_signed_in?%> 
+      <%= link_to "エントランス", root_path, class: "about"%> 
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "devise_destroy"%>
-      <%= link_to "ホーム", root_path, class: "home"%> 
+      <%= link_to "ホーム", rooms_path, class: "home"%> 
       <%= link_to "マイページ", user_path(current_user), class: "mypage.lead" %>
     <% else %> 
       <%= link_to "ログイン", new_user_session_path, class: "devise_login" %> 
@@ -22,7 +24,7 @@
     <% end %>
     <% if flash[:danger] %> 
       <p class="text-danger" id="alert"><%= flash[:danger]%>
-    <% end %>
+    <% end %> 
     <%= yield %> 
   </body>
 </html>
