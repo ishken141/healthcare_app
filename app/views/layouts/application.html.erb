@@ -11,7 +11,6 @@
   </head>
   <body> 
     <% if user_signed_in?%> 
-      <%= link_to "エントランス", root_path, class: "about"%> 
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "devise_destroy"%>
       <%= link_to "ホーム", rooms_path, class: "home"%> 
       <%= link_to "マイページ", user_path(current_user), class: "mypage.lead" %>
