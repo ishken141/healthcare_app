@@ -7,7 +7,7 @@
 # デモ
 [![Image from Gyazo](https://i.gyazo.com/d9967b150349edc78353bb836c2a43ee.gif)](https://gyazo.com/d9967b150349edc78353bb836c2a43ee)
 [![Image from Gyazo](https://i.gyazo.com/f3ae077337ca10673bdeed001cb30a76.gif)](https://gyazo.com/f3ae077337ca10673bdeed001cb30a76)
- * フォロー、フォロワー機能で、各ユーザーの信用度が可視化出来ます。
+ * ユーザープロフィール情報作成、フォロー、フォロワー機能で、各ユーザーの信用度が可視化出来ます。
  * 相談室作成、いいね機能、チャット形式でカウンセリングが出来ます。
  * ユーザーごとに店舗情報の作成が出来る為、来店に繋げられるような仕組みになっております。
 
