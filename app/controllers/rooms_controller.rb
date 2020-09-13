@@ -16,6 +16,7 @@ class RoomsController < ApplicationController
     flash[:success] = "作成しました！"
     redirect_to user_rooms_path(@user) 
     else  
+    flash[:info] = "相談室名を入力してください！"
     render :new
     end
   end 
@@ -25,6 +26,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id]) 
     @messages = @room.messages.includes(:user)
     @message = Message.new 
+    @like = Like.new
   end  
 
   def destroy 

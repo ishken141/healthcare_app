@@ -1,3 +1,6 @@
+ <% if flash[:info] %> 
+  <p class="text-info" id="info"><%= flash[:info]%>
+<% end %> 
 <div class="create_room">
   <%= form_with model: [@user, @room], local: true do |f| %> 
 <div class="form-room"> 
