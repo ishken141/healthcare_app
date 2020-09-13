@@ -16,10 +16,10 @@
 <div class="follow_index">
   <%= image_tag user.profile.image.url, class: "follow_image" %> 
 <div class="follow_info"> 
-  <%= link_to user.name, user_path(user), method: :get,class: "follow_name"%> 
+  <%= link_to user.name, user_path(user), method: :get, class: "follow_name"%> 
   <%= link_to user.profile.certificaton, class: "follow_center"%> 
   <%= link_to room.box, user_room_path(user.id, room.id), class: "room_index"%> 
-  <%= link_to "👍 #{room.likes.count}", user_room_path(user.id, room.id), class: "btn-like" %>
+  <%= link_to "👍 #{room.likes.count}", user_room_path(user.id, room.id), class: "btn2-like" %>
 </div>
   <% end %> 
   <% end %>

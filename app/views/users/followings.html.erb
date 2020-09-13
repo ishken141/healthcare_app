@@ -5,8 +5,8 @@
 <div class="follow_index">
   <%= image_tag user.profile.image.url, class: "follow_image" %>
 <div class="follow_info">
-  <%= link_to "#{user.name}", user_path(user), method: :get %> 
-  <%= link_to "#{user.profile.certificaton}"%> 
+  <%= link_to "#{user.name}", user_path(user), method: :get, class: "follow_name" %> 
+  <%= link_to "#{user.profile.certificaton}", class: "follow_center" %> 
 </div>
 </div>
   <% end %> 

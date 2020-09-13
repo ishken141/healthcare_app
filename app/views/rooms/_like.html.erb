@@ -1,7 +1,7 @@
 <div class="like">
   <% if user_signed_in? %>
     <% if current_user.already_liked?(room) %> 
-      <%= button_to "👍Like #{@room.likes.count}", user_room_like_path(@user, room, current_user.likes.find_by(room_id: @room.id)), method: :delete, remote: true %>
+      <%= button_to "👍Like #{@room.likes.count}", user_room_like_path(@user, room, current_user.likes.find_by(room_id: @room.id)), method: :delete, class: "like-btn", remote: true %>
     <% else %> 
       <%= button_to "👆Like #{@room.likes.count}", user_room_likes_path(@user,room,current_user.likes.build), class: "like-btn", remote: true %> 
     <% end %> 
