@@ -1,11 +1,11 @@
 # healthcare_app
-[![Image from Gyazo](https://i.gyazo.com/d9967b150349edc78353bb836c2a43ee.gif)](https://gyazo.com/d9967b150349edc78353bb836c2a43ee)
+[![Image from Gyazo](https://i.gyazo.com/4135151b7da3ddea1e9aa2fe1f25cfc5.jpg)](https://gyazo.com/4135151b7da3ddea1e9aa2fe1f25cfc5)
  * https://lit-springs-92807.herokuapp.com/
  * ヘルスケアカウンセリング専用SNSです。
  * 相談室を開設し、お客様とのコミュニケーションを取りながら悩みや症状の改善を図るアプリです。
  
 # デモ
- 
+[![Image from Gyazo](https://i.gyazo.com/d9967b150349edc78353bb836c2a43ee.gif)](https://gyazo.com/d9967b150349edc78353bb836c2a43ee)
 [![Image from Gyazo](https://i.gyazo.com/f3ae077337ca10673bdeed001cb30a76.gif)](https://gyazo.com/f3ae077337ca10673bdeed001cb30a76)
  
 # 特徴 
