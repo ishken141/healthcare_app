@@ -19,6 +19,7 @@
   <%= link_to user.name, user_path(user), method: :get,class: "follow_name"%> 
   <%= link_to user.profile.certificaton, class: "follow_center"%> 
   <%= link_to room.box, user_room_path(user.id, room.id), class: "room_index"%> 
+  <%= link_to "👍 #{room.likes.count}", user_room_path(user.id, room.id), class: "btn-like" %>
 </div>
   <% end %> 
   <% end %>

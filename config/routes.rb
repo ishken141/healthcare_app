@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :users, only: :show do 
     resources :profiles, only: [:edit, :update]   
     resources :rooms, only: [:index, :new, :create, :destroy, :show]  do 
+    resources :likes, only: [:create, :destroy]
     resources :messages, only: [:create, :destroy]  
     end 
     resources :stores

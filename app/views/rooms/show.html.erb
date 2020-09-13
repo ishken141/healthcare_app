@@ -1,7 +1,12 @@
 <%= render "header_room"%>
 <div class="Chat"> 
 <div class="message_image">
-  <%= image_tag @room.image.url, class: "message_image_first" %>  
+  <%= image_tag @room.image.url, class: "message_image_first" %> 
+  <div class="btn-bar"> 
+  <div class="btn-box"> 
+    <%= render partial: "rooms/like", locals: { room: @room, like: @like } %>
+  </div>
+  </div> 
 </div>
 <div class="MessageField">     
   <% @room.messages.each do |message| %> 
