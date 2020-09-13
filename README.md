@@ -1,4 +1,4 @@
-# アプリ名　healthcare_app
+# healthcare_app
 [![Image from Gyazo](https://i.gyazo.com/d9967b150349edc78353bb836c2a43ee.gif)](https://gyazo.com/d9967b150349edc78353bb836c2a43ee)
  * https://lit-springs-92807.herokuapp.com/
  * ヘルスケアカウンセリング専用SNSです。
